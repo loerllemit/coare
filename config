@@ -1,0 +1,68 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+IdentityFile ~/.ssh/coare-ssh
+
+Host salik
+     HostName saliksik.asti.dost.gov.ph
+     User christian.llemit
+     IdentityFile ~/.ssh/coare-ssh
+     StrictHostKeyChecking no
+
+Host salik-debug
+     HostName saliksik-cpu-21
+     User christian.llemit
+     IdentityFile ~/.ssh/coare-ssh
+     StrictHostKeyChecking no
+     ProxyCommand ssh -q -W %h:%p salik
+ 
+Host yka-salik
+     HostName saliksik.asti.dost.gov.ph
+     User yka.ong
+     IdentityFile ~/.ssh/yka-key
+     StrictHostKeyChecking no
+
+Host yka-debug
+     HostName saliksik-cpu-21
+     User yka.ong
+     IdentityFile ~/.ssh/yka-key
+     StrictHostKeyChecking no
+     ProxyCommand ssh -q -W %h:%p salik    
+
+Host github
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/github
+     
+
+
+# Host tux
+#      HostName 202.90.159.132
+#      User christian.llemit
+#      IdentityFile ~/.ssh/coare-ssh
+
+# Host gpu
+#      HostName 202.90.159.241
+#      User christian.llemit
+#      IdentityFile ~/.ssh/coare-ssh
+
+# Host asti
+#      HostName tux.asti.gov.ph
+#      User christian.llemit
+#      IdentityFile ~/.ssh/coare-ssh
+
+
+# Host yka-tux
+#      HostName 202.90.159.132
+#      User yka.ong
+#      IdentityFile ~/.ssh/yka-key
+
+# Host yka-gpu
+#      HostName 202.90.159.241
+#      User yka.ong
+#      IdentityFile ~/.ssh/yka-key
+
+# Host yka-asti
+#      HostName tux.asti.gov.ph
+#      User yka.ong
+#      IdentityFile ~/.ssh/yka-key
+
+     
