@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name LiCaF_relax
+#SBATCH --job-name LiSAF_relax
 #SBATCH --output 1_run.log
 #SBATCH --ntasks=40
 #SBATCH --mem=80G
